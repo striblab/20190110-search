@@ -1,0 +1,290 @@
+/**
+ * Main style file for project.
+ * Uses SASS, specifically the SCSS syntax
+ * http://sass-lang.com/
+ */
+
+
+// Include strib-icons
+$strib-fonts-location: '//static.startribune.com/assets/libs/strib-icons/0.0.10/';
+@import '@striblab/strib-icons/build/strib-icons.scss';
+
+
+// Environment noting
+@import "shared/_environment";
+
+// Strib styles
+// https://github.com/striblab/strib-styles/blob/master/source/styles/_variables.scss
+
+// Assumed that this project lives within an existing page, so we add a
+// wrapper that is very specific and wrap our other styles in it so
+// that we don't affect other styles on the page.  Note that
+// this increases the CSS size, and it means strib-styles won't use
+// rems when it would otherwise.
+$selector-wrapper: '.strib-styles.ssa.ssb.ssc';
+@import '@striblab/strib-styles/source/styles/default-wrapper.scss';
+
+// Project specific styles.  Split styles into files per component
+#{$selector-wrapper} {
+  // Split your styles into multiple files so its easier to understand and change
+  @import 'shared/_project';
+}
+
+.tooltip {
+  font-family: "Benton Sans", Helvetica, Arial, sans-serif;
+  background-color: white;
+  height: auto;
+  width: 200px;
+  padding: 10px;
+  border-radius: 0;
+  border: 1px solid black;
+  font-size: 13px;
+  font-family: Arial;
+  text-align:left !important;
+}
+
+.legendary {
+  padding: 4px;
+  color: #fff;
+  font-weight: bold;
+  border-radius: 5px;
+  padding: 0 7px;
+  margin-bottom: 3px;
+  display: inline-block;
+}
+  
+.content-scroll {
+  max-width: 100% !important;
+  margin: auto;
+}
+
+.key_legend {
+  width: 10px;
+  height: 10px;
+  border-radius: 50%;
+  display: inline-block;
+  margin-bottom: 2px;
+}
+
+.legendary {
+  padding: 4px;
+  color: #fff;
+  font-weight: bold;
+  border-radius: 5px;
+  padding: 0 7px;
+  margin-bottom: 3px;
+  display: inline-block;
+  font-family: "Benton Sans", Helvetica, Arial, sans-serif !important;
+}
+
+#key {
+  width:520px;
+  margin-left:auto;
+  margin-right:auto;
+}
+.adjacent {
+  width:49%;
+  display:inline-block;
+  font-size:0.8em;
+  margin-bottom:50px;
+}
+.candidateName {
+  text-align:center;
+  font-weight:bold;
+  padding: 4px;
+  color: #fff;
+  font-weight: bold;
+  border-radius: 5px;
+  padding: 0 7px;
+  margin-bottom: 3px;
+  font-family: "Benton Sans", Helvetica, Arial, sans-serif !important;
+}
+.rank span {
+  font-weight:bold;
+}
+
+	/*PURPLE SHADED RAMP*/
+	.purple5 {
+		fill: #4A4061;
+		background-color: #4A4061;
+		color: #ffffff;
+	}
+	
+	.purple4 {
+		fill: #62597D;
+		background-color: #62597D;
+		color: #ffffff;
+	}
+	
+	.purple3 {
+		fill: #7D739C;
+		background-color: #7D739C;
+		color: #ffffff;
+	}
+	
+	.purple2 {
+		fill: #AFA8C9;
+		background-color: #AFA8C9;
+		color: #ffffff;
+	}
+	
+	.purple1 {
+		fill: #D9D5E6;
+		background-color: #D9D5E6;
+	}
+	
+	/*RED SHADED RAMP*/
+	.red1 {
+		fill: #F2D2C7;
+		background-color: #F2D2C7;
+	}
+	.red2 {
+		fill: #F2BAAE;
+		background-color: #F2BAAE;
+	}
+	.red3 {
+		fill: #DF8F86;
+		background-color: #DF8F86;
+	}
+	.red4 {
+		fill: #C2655F;
+		background-color: #C2655F;
+	}
+	.red5 {
+		fill: #9E403C;
+		background-color: #9E403C;
+	}
+	/*ORANGE SHADED RAMP*/
+	.orange1 {
+		fill: #F2E0C7;
+		background-color: #F2E0C7;
+	}
+	.orange2 {
+		fill: #F2C9AC;
+		background-color: #F2C9AC;
+	}
+	.orange3 {
+		fill: #DEA381;
+		background-color: #DEA381;
+	}
+	.orange4 {
+		fill: #C28059;
+		background-color: #C28059;
+	}
+	.orange5 {
+		fill: #8F4B31;
+		background-color: #8F4B31;
+	}
+	/*BLUE SHADED RAMP*/
+	.blue1 {
+		fill: #D1E6E1;
+		background-color: #D1E6E1;
+	}
+	.blue2 {
+		fill: #A7E6E3;
+		background-color: #A7E6E3;
+	}
+	.blue3 {
+		fill: #80ADAD;
+		background-color: #80ADAD;
+	}
+	.blue4 {
+		fill: #3580A3;
+		background-color: #3580A3;
+	}
+	.blue5 {
+		fill: #0D4673;
+		background-color: #0D4673;
+	}
+	/*GREEN SHADED RAMP*/
+	.green1 {
+		fill: #D6E6CC;
+		background-color: #C7E5B5;
+	}
+	.green2 {
+		fill: #B6E3A6;
+		background-color: #9EE384;
+	}
+	.green3 {
+		fill: #8CBF82;
+		background-color: #5BBF48;
+	}
+	.green4 {
+		fill: #5A9E65;
+		background-color: #299E3D;
+	}
+	.green5 {
+		fill: #3C8259;
+		background-color: #118241;
+	}
+	/*GREY SHADED RAMP*/
+	.gray1 {
+		fill: #ddd;
+		background-color: #ddd;
+	}
+	.gray2 {
+		fill: #CCC;
+		background-color: #CCC;
+	}
+	.gray3 {
+		fill: #969696;
+		background-color: #969696;
+	}
+	.gray4 {
+		fill: #636363;
+		background-color: #636363;
+		color: #fff;
+	}
+	.gray5 {
+		fill: #333333;
+		background-color: #333333;
+		color: #fff;
+	}
+	/*STEEL SHADED RAMP*/
+	.steel1 {
+		fill: #ddd;
+		background-color: #DAE1E7;
+	}
+	.steel2 {
+		fill: #C6D1D9;
+		background-color: #C6D1D9;
+	}
+	.steel3 {
+		fill: #A8B9C5;
+		background-color: #A8B9C5;
+	}
+	.steel4 {
+		fill: #7F98AA;
+		background-color: #7F98AA;
+		color: #fff;
+	}
+	.steel5 {
+		fill: #556E7F;
+		background-color: #556E7F;
+		color: #fff;
+	}
+	.steel6 {
+		fill: #2C3942;
+		background-color: #2C3942;
+		color: #fff;
+  }
+  
+  .divert {
+		fill: #b37862;
+		background-color: #b37862;
+		color: #fff;
+  }
+
+  @media (max-width:800px) {
+		#wrapper, .slide, .container-lg, .map, .map svg {
+      width: 100% !important;
+		}
+	}
+	@media (max-width:500px) {
+		#wrapper, #key {
+      width: 100%;
+    }
+    .city-label, .label-bg {
+      display:none !important;
+    }
+	}
