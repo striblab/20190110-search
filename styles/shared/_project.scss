@@ -202,9 +202,15 @@ h2 {
 		text-align: left;
 	}
 	.chart {
-		height:280px !important;
+		height:280px;
 		pointer-events: none !important;
 	}
+
+	#chart {
+		height:350px !important;
+		pointer-events: none !important;
+	}
+
 
 	.chart .overlay, .chart {
 		pointer-events: none !important;

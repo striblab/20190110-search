@@ -93,6 +93,7 @@ utils.environmentNoting();
 
 import Map from './map.js';
 import Chart from './timechart.js';
+import Chart1 from './chart.js';
 
 const map = new Map("#mapCounties");
 const chart0 = new Chart("#chartTrend0",0);
@@ -109,7 +110,9 @@ const chart10 = new Chart("#chartTrend10",10);
 const chart11 = new Chart("#chartTrend11",11);
 const chart12 = new Chart("#chartTrend12",12);
 const chart13 = new Chart("#chartTrend13",13);
+const chart = new Chart1("#chart");
 
+chart.render();
 map.render();
 chart0.render();
 chart1.render();

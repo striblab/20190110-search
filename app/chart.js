@@ -1,7 +1,7 @@
 import * as d3 from 'd3';
 import * as c3 from 'c3';
 
-class Chart {
+class Chart1 {
 
     constructor(target) {
         this.target = target;
@@ -23,7 +23,7 @@ class Chart {
             padding: padding,
             data: {
                 columns: [
-                    ['Index',100,91,77,62,61,49,39,17,14,14,9,6,4,2]
+                    ['Index',100,92,89,61,39,36,33,17,11,8,6,6,0,0]
                 ],
                 type: 'bar',
                 labels: {
@@ -75,7 +75,7 @@ class Chart {
                         left: 0
                     },
                     type: 'category',
-                    categories: ["Biden","Sanders","Klobuchar","Warren ","Buttigieg","Yang","Gabbard","Booker","Williamson","Bloomberg","Steyer","Bennet","Delaney","Patrick"],
+                    categories: ['Sanders','Biden','Yang','Klobuchar','Gabbard','Buttigieg','Warren','Steyer','Williamson','Bloomberg','Booker','Delaney','Patrick','Bennet'],
                     tick: {
                         multiline: false
                     }
@@ -87,6 +87,6 @@ class Chart {
 }
 
 export {
-    Chart as
+    Chart1 as
     default
 }
