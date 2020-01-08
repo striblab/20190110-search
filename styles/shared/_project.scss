@@ -219,7 +219,11 @@ h2 {
 		stroke-width: 4;
 	}
 	.chart .c3-line {
-		stroke-width: 4px !important;
+		stroke-width: 4px;
+	}
+
+	.c3-line-trend{
+		stroke-width: 1px !important;
 	}
 	.chart-tooltip {
 		background-color: rgba(0, 0, 0, 0.8);

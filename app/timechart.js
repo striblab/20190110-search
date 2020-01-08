@@ -36,6 +36,23 @@ class Chart {
         ['Tulsi Gabbard',2,100,66,45,21,7,3,7,18,7,18,17,7,1,13,3,5,1,9,55,20,7,15,16,8,71,29,30,16,68,100,45,31,9,34,14,18,25,17,5,11,100,100,47,33,30,52,36,28,14,70,28,39]
     ];
 
+    var dataTrends = [
+        ['trend',33,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,61],
+        ['trend',4,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,89],
+        ['trend',27,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,100],
+        ['trend',4,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,6],
+        ['trend',0,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,0],
+        ['trend',100,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,33],
+        ['trend',20,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,92],
+        ['trend',0,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,6],
+        ['trend',2,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,11],
+        ['trend',2,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,0],
+        ['trend',2,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,8],
+        ['trend',2,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,36],
+        ['trend',0,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,17],
+        ['trend',2,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,39]
+    ];
+
     console.log(dataCandidates)
 
     var colors = ['#80ADAD', '#636363', '#8CBF82', '#7F98AA', '#aaaaaa', '#7D739C', '#b37862', '#aaaaaa', '#aaaaaa', '#aaaaaa', '#aaaaaa', '#DEA381', '#aaaaaa', '#9E403C'];
@@ -45,9 +62,27 @@ class Chart {
           padding: padding,
           data: {
                 columns: [
-                    dataCandidates[self.candidate]
+                    dataCandidates[self.candidate],
+                    dataTrends[self.candidate]
                 ],
-            type: 'spline'
+            type: 'spline',
+            colors: {
+                'Amy Klobuchar': colors[self.candidate],
+                'Andrew Yang': colors[self.candidate],
+                'Bernie Sanders': colors[self.candidate],
+                'Cory Booker': colors[self.candidate],
+                'Deval Patrick': colors[self.candidate],
+                'Elizabeth Warren': colors[self.candidate],
+                'Joe Biden': colors[self.candidate],
+                'John Delaney': colors[self.candidate],
+                'Marianne Williamson': colors[self.candidate],
+                'Michael Bennet': colors[self.candidate],
+                'Michael Bloomberg': colors[self.candidate],
+                'Pete Buttigieg': colors[self.candidate],
+                'Tom Steyer': colors[self.candidate],
+                'Tulsi Gabbard': colors[self.candidate],
+                'trend': '#333333'
+            },
           },
             legend: {
               show: false
@@ -58,9 +93,6 @@ class Chart {
             point: {
                 show: true,
                 r: function(d) { if (d.x == 6 || d.x == 5 || d.x == 4 || d.x == 3 || d.x == 2 || d.x == 1 || d.x == 0) { return 0; } else { return 0; } }
-            },
-            color: {
-                pattern: [colors[self.candidate]]
             },
             axis: {
                   // rotated: true,
