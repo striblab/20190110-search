@@ -125,8 +125,8 @@ class Chart {
               connectNull: true
             },
             point: {
-                show: true,
-                r: function(d) { if (d.x == 6 || d.x == 5 || d.x == 4 || d.x == 3 || d.x == 2 || d.x == 1 || d.x == 0) { return 0; } else { return 0; } }
+                show: true, 
+                r: function(d) { if (d.x == 12 || d.x == 0) { return 4; } else { return 0; } }
             },
             axis: {
                   // rotated: true,
@@ -161,16 +161,6 @@ class Chart {
              focus:{
                   show:false
                 },
-            },
-            tooltip: {
-              contents: function(d, defaultTitleFormat, defaultValueFormat, color) {
-                return '<div class="chart-tooltip purple3"><span class="tooltip-label">' + d[2].id + ':</span>' +
-                  '<span class="tooltip-value">' + defaultValueFormat(d[2].value) + '</span></div>' +
-                  '<div class="chart-tooltip gray3"><span class="tooltip-label">' + d[1].id + ':</span>' +
-                  '<span class="tooltip-value">' + defaultValueFormat(d[1].value) + '</span></div>' +
-                  '<div class="chart-tooltip gray1"><span class="tooltip-label">' + d[0].id + ':</span>' +
-                  '<span class="tooltip-value">' + defaultValueFormat(d[0].value) + '</span></div>';
-              }
             }
     });
   
