@@ -23,7 +23,7 @@ class Chart1 {
             padding: padding,
             data: {
                 columns: [
-                    ['Index',100,92,89,61,39,36,33,17,11,8,6,6,0,0]
+                    ['Index',100,92,89,61,39,36,33,17,8,6,0,0]
                 ],
                 type: 'bar',
                 labels: {
@@ -75,7 +75,7 @@ class Chart1 {
                         left: 0
                     },
                     type: 'category',
-                    categories: ['Sanders','Biden','Yang','Klobuchar','Gabbard','Buttigieg','Warren','Steyer','Williamson','Bloomberg','Booker','Delaney','Patrick','Bennet'],
+                    categories: ['Sanders','Biden','Yang','Klobuchar','Gabbard','Buttigieg','Warren','Steyer','Bloomberg','Delaney','Patrick','Bennet'],
                     tick: {
                         multiline: false
                     }
